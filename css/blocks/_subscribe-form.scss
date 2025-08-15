@@ -1,0 +1,19 @@
+.subscribe-form {
+  display: flex;
+  column-gap: 20px;
+  padding: 58px 40px;
+  background-color: $color_dark_alt;
+  border-radius: $border_radius;
+
+  @include dekstop {
+    flex-direction: column;
+    row-gap: 22px;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+  }
+
+  &__button {
+    height: $button_height;
+  }
+}

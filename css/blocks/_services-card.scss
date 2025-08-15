@@ -1,0 +1,92 @@
+.services-card {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 30px;
+  min-height: 310px;
+  padding: 50px;
+  background-color: $color_gray;
+  border: $border;
+  border-radius: $border_radius_large;
+  box-shadow: $shadow;
+
+  @include mobile {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 27px;
+  }
+
+  &--acent-bg {
+    background-color: $color_accent;
+  }
+
+  &--dark-bg {
+    background-color: $color_dark;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 30px;
+
+    @include mobile {
+      display: contents;
+    }
+  }
+
+  &__image {
+    align-self: center;
+
+    @include dekstop {
+      max-width: 50%;
+      height: auto;
+    }
+
+    @include mobile {
+      max-width: 165px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    @include mobile {
+      grid-column: -1 / 1;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 15px;
+    font-size: 20px;
+
+    &--light {
+      color: $color_light;
+    }
+
+    @include mobile {
+      align-self: end;
+    }
+
+    --label {
+      @include mobile {
+        @include visually-hidden;
+      }
+    }
+  }
+
+  &__link-icon-wrapper {
+    @include flex-center;
+    @include square(41px);
+
+    background-color: currentColor;
+    border-radius: 50%;
+
+    svg {
+      color: $color_accent;
+    }
+  }
+}

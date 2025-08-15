@@ -1,0 +1,77 @@
+// ABOVE для того чтобы какие-то элементы использовались лишь при выше например 767
+// Оно действует как ограничитель
+
+$dekstop_above: 1281px;
+$dekstop: 1280px;
+
+$tablet_above: 1024px;
+$tablet: 1023px;
+
+$mobile_above: 768px;
+$mobile: 767px;
+
+$mobile_s_above: 481px;
+$mobile_s: 480px;
+
+@mixin dekstop_above {
+  @media (min-width: $dekstop_above) {
+    @content;
+  }
+}
+
+@mixin dekstop {
+  @media (max-width: $dekstop) {
+    @content;
+  }
+}
+
+@mixin tablet_above {
+  @media (min-width: $tablet_above) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mobile_above {
+  @media (min-width: $mobile_above) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mobile_s_above {
+  @media (min-width: $mobile_s_above) {
+    @content;
+  }
+}
+
+@mixin mobile_s {
+  @media (max-width: $mobile_s) {
+    @content;
+  }
+}
+
+//ЭТО МНЕ НАДО ФИКСИТ ХАВЕР НА МОБАЙЛЕ ЧЕРЕЗ НЕГО НАДО ВСЕГДА ДАВАТЬ ХАВЕР
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}

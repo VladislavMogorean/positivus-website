@@ -1,0 +1,46 @@
+.banner {
+  $bannerImageOffsetY: 24px; // паддинг по y расстояние от всех остальных
+
+  padding-block: $bannerImageOffsetY;
+
+  @include tablet {
+    padding-block: 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color_gray;
+    border-radius: $border_radius_large;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 26px;
+    padding: 60px; // внутри самого баннера текст и тд
+
+    @include tablet {
+      padding: 50px;
+    }
+
+    @include mobile {
+      row-gap: 20px;
+    }
+  }
+
+  &__description {
+    max-width: 500px;
+  }
+
+  &__image {
+    margin-block: calc($bannerImageOffsetY * -1);
+
+    @include tablet {
+      max-width: 40%;
+      height: auto;
+    }
+  }
+}

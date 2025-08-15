@@ -1,0 +1,25 @@
+// контейнер
+.container {
+  max-width: calc($container_width + $container_padding_x) * 2; // формула максимальной ширины контейнера
+  margin-inline: auto; // выравнивание
+  padding-inline: $container_padding_x;
+}
+
+// прячем чтолибо
+.visually-hidden {
+  @include visually-hidden;
+}
+
+// скрывает на мобильных элементы
+.hidden-mobile {
+  @include mobile {
+    display: none !important;
+  }
+}
+
+// отобразит на мобильных но скроект на диапазонах больше чем мобильное устройство
+.visible-mobile {
+  @include mobile-above {
+    display: none !important;
+  }
+}

@@ -1,0 +1,34 @@
+$color_dark: #191a23;
+$color_dark_alt: #292a32;
+$color_light: #ffffff;
+$color_accent: #b9ff66;
+$color_gray: #f3f3f3;
+$color_gray_alt: #898989;
+
+$border: 1px solid $color_dark;
+$border_radius: 14px;
+$border_radius_small: 7px;
+$border_radius_large: 45px;
+
+$shadow: 0 5px 0 0 $color_dark;
+
+$font_family_base: 'Space Grotesk', sans-serif;
+
+$container_width: 1240px; // ширина секций
+$container_padding_x: 20px;
+
+$section_padding_y: 70px;
+
+$input_height: 59px; // ширина полей
+$button_height: 68px; // ширина кнопок
+
+$transition-duration: 0.2s;
+
+// отступы внутри блоков секций
+@include dekstop {
+  $section_padding_y: 50px !global;
+}
+
+@include mobile {
+  $section_padding_y: 30px !global;
+}

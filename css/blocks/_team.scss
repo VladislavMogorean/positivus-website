@@ -1,0 +1,16 @@
+.team {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+
+  &__button {
+    align-self: end;
+    min-width: 269px;
+    background-color: $color_dark_alt;
+    color: white;
+
+    @include mobile-s {
+      width: 100%;
+    }
+  }
+}

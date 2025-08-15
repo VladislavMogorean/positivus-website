@@ -1,0 +1,11 @@
+.services {
+  &__list {
+    &:not(:last-child) {
+      margin-bottom: 100px; // margin потому что два разных блока отталкиваем
+
+      @include mobile {
+        margin-bottom: 70px;
+      }
+    }
+  }
+}
